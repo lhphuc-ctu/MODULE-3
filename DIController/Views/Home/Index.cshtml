@@ -1,0 +1,18 @@
+﻿@using Microsoft.Extensions.Configuration
+@using DI.Helper
+@inject IConfiguration Configuration
+@inject MyHtmlHelper Html
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<h2>
+    MyRoot:MyParent:MyChildName: @Configuration["MyRoot:MyParent:MyChildName"]
+</h2>
+<div>
+    Test: @Html.Value
+</div>
